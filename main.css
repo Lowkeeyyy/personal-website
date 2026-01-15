@@ -1,0 +1,30 @@
+html  {
+    font-size: 22px;
+}
+
+body {
+    background-color: #333;
+    color: whitesmoke
+}
+a {
+        color: whitesmoke;
+        text-decoration: none; /* removes underline */
+    }
+
+    a:hover {
+        color: orange; /* when mouse is over */
+    }
+
+.brac {
+    text-decoration: none;
+}
+.brac:hover {
+    text-decoration: underline;
+}
+
+.resume {
+    text-decoration: none;
+}
+.resume:hover {
+    text-decoration: underline;
+}
