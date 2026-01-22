@@ -1,178 +1,121 @@
 <!DOCTYPE html>
-    
-<html lang = "en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name = "author" content = "Ashfaq Shahriar">
-    <meta name = "description" content="This is my first website and I am making it because why not? its fun!!!">  
-    
-    <title> Lowkey's Website </title>
-    
-    <link rel="icon" href="imgae files/cat.png" type="image/x-icon">        
-    <link rel="stylesheet" href="main.css" type="text/css">
+    <meta name="author" content="Ashfaq Shahriar">
+    <meta name="description" content="Personal portfolio website of Ashfaq Shahriar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lowkey | Portfolio</title>
+
+    <link rel="icon" href="image files/cat.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
-    <header>
-    
-        <h1>Welcome to Lowkey's</h1>
-        
-        <nav aria-label="primary-navigation">
-            <ul>
-                
-                <li>
-                    <a href="#info">About me</a>
-                </li>
-                
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-                
-                <li>
-                    <a href="#work_experience"> Work Experience </a>
-                </li>
-                
-                <li>
-                    <a href="resume">Resume </a>
-                </li>
-                
-                <li>
-                    <a href="#end">Contact</a>
-                </li>
+<header class="container">
+    <h1>Welcome to Lowkey's</h1>
 
-            </ul>
-        </nav>
-    
-    </header>
+    <nav aria-label="primary-navigation">
+        <ul class="nav-list">
+            <li><a href="#info">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work_experience">Experience</a></li>
+            <li><a href="demo01-ashfaq-shahriar.pdf" target="_blank">Resume</a></li>
+            <li><a href="#end">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <hr>
+<hr>
 
-    <main>
+<main class="container">
 
-        <article id = "info">
-            <p> About Me </p>
-            <figure>
-            <img src="imgae files/IMG_9153.jpeg" alt="ashfaq's picture" title="Profile Picture" width ="300" height="300" >
-                <br> HI! I am Ashfaq Shahriar. You can call me Lowkey.
-                <br>I'm a CS undergrad at <a href="https://www.bracu.ac.bd/" class="brac" target="_blank"> <em>Brac University</em></a>, learning and building along the way. This is my personal space to share my journey
-            </figure>
-            </p>
+    <!-- ABOUT -->
+    <article id="info">
+        <h2>About Me</h2>
 
-            <hr>
+        <figure>
+            <img src="image files/IMG_9153.jpeg" alt="Ashfaq Shahriar" width="300">
+            <figcaption>
+                Hi! I am Ashfaq Shahriar (Lowkey). I'm a CS undergrad at
+                <a href="https://www.bracu.ac.bd/" class="brac" target="_blank"><em>BRAC University</em></a>.
+                This is my personal space to share my journey.
+            </figcaption>
+        </figure>
 
-            <p>
-                <figure>
-
-                    <img src="imgae files/d60a732b-726e-45b6-aca8-397529bac6a9.jpeg" alt="su members" title="My Friends" width="600" height = 480 >
-
-                    <br>This was one of the best trips I have ever been to. The best part of the wholejpourney wss the chaos and the only people i wanted to experienc the chaos of the journey together. 
-                </figure>
-            </p>
-        </article>
-
-        <hr>
-
-        <article id="skills">
-            <p>
-                Skills
-            </p>
-                <ul>
-                    <li>
-                       <em>Python Programming Language </em>
-                        <br>Proficient in Python fundamentals, including control flow, functions, and core data structures. Capable of writing clean, efficient, and readable code for problem-solving and applications.
-                    </li>
-                </ul>
-
-                <ul>
-                    <li>
-                        <em>
-                           Data Structures & Algorithms (Python)
-                        </em> 
-                            <br>Practical experience solving problems involving arrays, strings, linked lists, stacks, queues, hash tables, and basic recursion with a focus on time and space efficiency.
-                    </li>
-                </ul>
-                
-                <ul>
-                    <li>
-                        <em>
-                            Competitive Programming & Algorithmic Thinking
-                        </em>
-                        <br>Solved algorithmic and logical problems on LeetCode and HackerRank using Python, demonstrating strong analytical thinking,
-                    </li>
-               </ul>
-
-                Soft Skills
-                <ul>
-                    Problem-solving • Analytical thinking • Critical thinking • Self-learner • Attention to detail • Time management • Adaptability • Persistence
-                </ul>
-           
-        </article>
+        <figure>
+            <img src="image files/d60a732b-726e-45b6-aca8-397529bac6a9.jpeg" alt="Trip with friends" width="500">
+            <figcaption>
+                One of the best trips of my life — pure chaos with the best people.
+            </figcaption>
+        </figure>
+    </article>
 
     <hr>
 
-        <article id="work_experience">
+    <!-- SKILLS -->
+    <article id="skills">
+        <h2>Skills</h2>
 
-            <p>
-               Work Experience
-                <ul>
-                    <li>
-                        Survey
-                        <br>December 2024 - July 2025
-                        <br> Conducted and analyzed surveys to provide insights for various platforms. Developed strong attention to detail and data accuracy.
-                
-                    </li>
-                </ul>
-            
-                <ul>
-                    <li>
-                        Private Tutoring Services
-                        <br> 2019-2021
-                        <br> Provided tutoring in mathematics and computer science to high school students.
+        <ul>
+            <li>
+                <strong>Python Programming</strong><br>
+                Proficient in Python fundamentals, clean and efficient problem-solving.
+            </li>
 
-                    </li>
-                </ul>
-                
-            
-        </article>
-            
+            <li>
+                <strong>Data Structures & Algorithms</strong><br>
+                Experience with arrays, strings, stacks, queues, hash tables, recursion.
+            </li>
 
-    </main>
-    
-    <hr>
+            <li>
+                <strong>Competitive Programming</strong><br>
+                Solved problems on LeetCode and HackerRank using Python.
+            </li>
+        </ul>
 
-    <footer>  
-
-        <article id = "end">
-        
-            <p>
-                &lt;&lt;&lt; &copy; Ashfaq Shahriar &gt;&gt;&gt;
-                
-                <ul>
-                    <li>
-                        Contact me at <a href="tel:+8801713420687"><em> number </em></a>
-                    </li>
-                    <li>
-                        Contact me at my <a href="ashfaqshahriarpersonal@gmail.com"> <em>maill</em></a>
-                    </li>
-                    <li>
-                        Githubglimpse of my <a href="demo01-ashfaq-shahriar.pdf" class = "resume" target="_blank"><em> resume</em></a>
-                    </li> 
-                    <li>
-                        <a href="https://www.google.com/" target="_blank">Google</a>
-                    </li>
-            </p>
-            
-            </ul>
-        </article>
-
-    </footer>
+        <h3>Soft Skills</h3>
+        <p>Problem-solving • Critical thinking • Self-learner • Time management • Adaptability</p>
+    </article>
 
     <hr>
 
-    <p><a href="#">Back to top</a></p>
-    
-    <hr>
+    <!-- EXPERIENCE -->
+    <article id="work_experience">
+        <h2>Work Experience</h2>
+
+        <ul>
+            <li>
+                <strong>Survey Analyst</strong> (Dec 2024 – Jul 2025)<br>
+                Conducted and analyzed surveys with attention to accuracy and insights.
+            </li>
+
+            <li>
+                <strong>Private Tutor</strong> (2019 – 2021)<br>
+                Tutored high school students in mathematics and computer science.
+            </li>
+        </ul>
+    </article>
+
+</main>
+
+<hr>
+
+<footer class="container" id="end">
+    <p>&copy; Ashfaq Shahriar</p>
+
+    <ul class="footer-links">
+        <li><a href="tel:+8801713420687">Phone</a></li>
+        <li><a href="mailto:ashfaqshahriarpersonal@gmail.com">Email</a></li>
+        <li><a href="demo01-ashfaq-shahriar.pdf" target="_blank">Resume</a></li>
+        <li><a href="https://github.com/Lowkeeyyy" target="_blank">GitHub</a></li>
+    </ul>
+</footer>
+
+<p class="back-top"><a href="#">Back to top ↑</a></p>
+
 </body>
 </html>
