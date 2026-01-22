@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Contact MyBlog">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | MyBlog</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .contact-form {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #e5e7eb;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            background: rgba(30, 41, 59, 0.5);
+            color: #e5e7eb;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #38bdf8;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #38bdf8, #7dd3fc);
+            color: #0f172a;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(56, 189, 248, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">📝 MyBlog</a>
+
+                <nav aria-label="primary-navigation">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#blog">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <a href="../index.html" class="back-btn">← Back to Home</a>
+
+        <article class="article">
+            <h1>Get In Touch</h1>
+
+            <p style="text-align: center; color: #cbd5e1; margin-bottom: 2rem;">
+                Have questions or want to work together? I'd love to hear from you!
+            </p>
+
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <h2 style="margin-bottom: 1.5rem;">Other Ways to Connect</h2>
+                <ul style="list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <li><a href="mailto:contact@myblog.com" style="color: #38bdf8; text-decoration: none; font-weight: 500;">📧 Email</a></li>
+                    <li><a href="#" style="color: #38bdf8; text-decoration: none; font-weight: 500;">🐦 Twitter</a></li>
+                    <li><a href="#" style="color: #38bdf8; text-decoration: none; font-weight: 500;">💼 LinkedIn</a></li>
+                    <li><a href="#" style="color: #38bdf8; text-decoration: none; font-weight: 500;">🔗 GitHub</a></li>
+                </ul>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>A modern blog dedicated to sharing insights about web development, design, and technology.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#blog">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Follow</h3>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyBlog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

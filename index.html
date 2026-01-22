@@ -15,7 +15,8 @@
 
 <body>
 
-<header class="container">
+<header class="header">
+    <div class="container">
     <h1>Welcome to Lowkey's</h1>
 
     <nav aria-label="primary-navigation">
@@ -23,10 +24,13 @@
             <li><a href="#info">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#work_experience">Experience</a></li>
+            <li><a href="#trips">Travel</a></li>
             <li><a href="demo01-ashfaq-shahriar.pdf" target="_blank">Resume</a></li>
+            <li><a href="...">Blog Posts</a></li>
             <li><a href="#end">Contact</a></li>
         </ul>
     </nav>
+    </div>
 </header>
 
 <hr>
@@ -34,30 +38,30 @@
 <main class="container">
 
     <!-- ABOUT -->
-    <article id="info">
+    <article id="info", class="card">
         <h2>About Me</h2>
 
+        <p>
+            Hello. Im Ashfaq Shahriar, an aspiring Data Scientist and AI Engineer driven by curiosity and a deep interest in how data powers intelligent systems. I work primarily with Python and enjoy exploring datasets, uncovering patterns, and applying machine learning techniques to solve meaningful problems.
+
+
+            Im actively building my foundation in data science, machine learning, and AI—combining theory with hands-on projects. My goal is to contribute to impactful, real-world applications while continuously learning and evolving in the fast-moving world of artificial intelligence.
+
+        </p>
+
         <figure>
-            <img src="image files/IMG_9153.jpeg" alt="Ashfaq Shahriar" width="300">
+            <img src="/imgae files/image.jpeg" alt="Ashfaq Shahriar" width="300">
             <figcaption>
-                Hi! I am Ashfaq Shahriar (Lowkey). I'm a CS undergrad at
-                <a href="https://www.bracu.ac.bd/" class="brac" target="_blank"><em>BRAC University</em></a>.
-                This is my personal space to share my journey.
+                This is my website and also my personal space to share my journeys throughout. Enjoy !!!
             </figcaption>
         </figure>
 
-        <figure>
-            <img src="image files/d60a732b-726e-45b6-aca8-397529bac6a9.jpeg" alt="Trip with friends" width="500">
-            <figcaption>
-                One of the best trips of my life — pure chaos with the best people.
-            </figcaption>
-        </figure>
     </article>
 
     <hr>
 
     <!-- SKILLS -->
-    <article id="skills">
+    <article id="skills", class="card">
         <h2>Skills</h2>
 
         <ul>
@@ -84,7 +88,7 @@
     <hr>
 
     <!-- EXPERIENCE -->
-    <article id="work_experience">
+    <article id="work_experience", class = 'card'>
         <h2>Work Experience</h2>
 
         <ul>
@@ -100,6 +104,32 @@
         </ul>
     </article>
 
+    <hr>
+
+    <!--TRIPS-->
+    <article id="trips", class="card"> 
+        <h2>Roam with Us</h2>
+
+        <div class="trip-images">
+            <figure>
+                <img src="imgae files/IMG_6839.jpeg" alt="img1", width="300">
+            </figure>
+            <figure>
+                <img src="imgae files/IMG_6802.jpeg" alt="im2", width="300">
+            </figure>
+            <figure>
+                <img src="imgae files/IMG_6624.jpeg" alt="im3", width="300">
+            </figure>
+        </div>
+        <ul>
+            <li>
+                <strong>Bandarban 2026</strong><br>
+                This was one of the nicest trips I have ever been to because of the view and the places felt like entirely different country view. 
+            </li>
+        </ul>
+
+    </article>
+
 </main>
 
 <hr>
@@ -110,7 +140,7 @@
     <ul class="footer-links">
         <li><a href="tel:+8801713420687">Phone</a></li>
         <li><a href="mailto:ashfaqshahriarpersonal@gmail.com">Email</a></li>
-        <li><a href="demo01-ashfaq-shahriar.pdf" target="_blank">Resume</a></li>
+        <li><a href="imgae files/resume01-ashfaq-shahriar.pdf" target="_blank">Resume</a></li>
         <li><a href="https://github.com/Lowkeeyyy" target="_blank">GitHub</a></li>
     </ul>
 </footer>

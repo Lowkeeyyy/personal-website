@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Understanding Responsive Design">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Understanding Responsive Design | MyBlog</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">📝 MyBlog</a>
+
+                <nav aria-label="primary-navigation">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#blog">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <a href="../index.html" class="back-btn">← Back to Home</a>
+
+        <article class="article">
+            <h1>Understanding Responsive Design</h1>
+
+            <div class="article-meta">
+                <span>📅 January 5, 2026</span>
+                <span>👤 By Your Name</span>
+                <span>⏱️ 7 min read</span>
+            </div>
+
+            <div class="article-content">
+                <p>
+                    Responsive design is no longer optional—it's essential. With users accessing websites from phones, tablets, laptops, and everything in between, creating flexible, adaptable websites is crucial. In this article, we'll explore the principles and practices of responsive design.
+                </p>
+
+                <h2>What is Responsive Design?</h2>
+
+                <p>
+                    Responsive design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes. Rather than creating fixed-width designs, responsive design uses flexible layouts and media queries to adapt to different screens.
+                </p>
+
+                <h2>The Three Core Principles</h2>
+
+                <h3>1. Fluid Grids</h3>
+                <p>
+                    Instead of using fixed pixel widths, use percentages or flexible units. This allows your layout to scale smoothly across different screen sizes.
+                </p>
+
+                <pre><code>/* Flexible grid */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column {
+  width: 33.333%; /* Flexible width */
+  float: left;
+}</code></pre>
+
+                <h3>2. Flexible Images</h3>
+                <p>
+                    Images should scale with their containing elements. Using <code>max-width: 100%</code> ensures images don't overflow their containers.
+                </p>
+
+                <pre><code>img {
+  max-width: 100%;
+  height: auto; /* Maintains aspect ratio */
+}</code></pre>
+
+                <h3>3. Media Queries</h3>
+                <p>
+                    Media queries allow you to apply different styles based on device characteristics like screen width, height, and orientation.
+                </p>
+
+                <pre><code>/* Mobile styles */
+.card {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .card {
+    width: calc(50% - 0.5rem);
+    display: inline-block;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .card {
+    width: calc(33.333% - 0.67rem);
+  }
+}</code></pre>
+
+                <h2>Mobile-First Approach</h2>
+
+                <blockquote>
+                    "Start with the smallest screen and progressively enhance for larger screens. This ensures a solid foundation for all devices."
+                </blockquote>
+
+                <p>
+                    The mobile-first approach involves:
+                </p>
+
+                <ol>
+                    <li>Design and code for mobile devices first</li>
+                    <li>Write base CSS for mobile</li>
+                    <li>Use media queries to add styles for larger screens</li>
+                    <li>This improves performance and accessibility</li>
+                </ol>
+
+                <h2>Breakpoints: Where to Set Them</h2>
+
+                <p>
+                    Common breakpoints include:
+                </p>
+
+                <ul>
+                    <li><strong>Small (mobile):</strong> 320px - 767px</li>
+                    <li><strong>Medium (tablet):</strong> 768px - 1023px</li>
+                    <li><strong>Large (desktop):</strong> 1024px and up</li>
+                </ul>
+
+                <p>
+                    However, choose breakpoints based on your content, not device sizes. If your content breaks at a certain width, that's your breakpoint.
+                </p>
+
+                <h2>Modern Layout Techniques</h2>
+
+                <h3>CSS Grid</h3>
+                <pre><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* No media queries needed for basic responsiveness! */</code></pre>
+
+                <h3>Flexbox</h3>
+                <pre><code>.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.flex-item {
+  flex: 1 1 250px; /* Grow, shrink, basis */
+}</code></pre>
+
+                <h2>Best Practices</h2>
+
+                <h3>1. Test on Real Devices</h3>
+                <p>
+                    Browser dev tools are helpful, but testing on actual devices reveals real-world performance and usability issues.
+                </p>
+
+                <h3>2. Use Appropriate Units</h3>
+                <ul>
+                    <li><code>em</code> and <code>rem</code> for font sizes and spacing</li>
+                    <li><code>%</code> and <code>vw/vh</code> for flexible sizing</li>
+                    <li>Avoid fixed pixel values when possible</li>
+                </ul>
+
+                <h3>3. Optimize for Performance</h3>
+                <ul>
+                    <li>Optimize images for different screen sizes</li>
+                    <li>Use lazy loading for images below the fold</li>
+                    <li>Minimize CSS and compress files</li>
+                </ul>
+
+                <h3>4. Ensure Touch-Friendly Interfaces</h3>
+                <ul>
+                    <li>Buttons should be at least 44x44px</li>
+                    <li>Provide adequate spacing between interactive elements</li>
+                    <li>Avoid hover-only interactions</li>
+                </ul>
+
+                <h2>Tools and Resources</h2>
+
+                <p>
+                    Several tools help with responsive design:
+                </p>
+
+                <ul>
+                    <li><strong>Chrome DevTools</strong> - Built-in device emulation</li>
+                    <li><strong>Figma</strong> - Design responsive layouts</li>
+                    <li><strong>Bootstrap and Tailwind</strong> - Responsive frameworks</li>
+                    <li><strong>Responsive Design Checker</strong> - Test multiple viewports</li>
+                </ul>
+
+                <h2>Conclusion</h2>
+
+                <p>
+                    Responsive design is fundamental to modern web development. By understanding its core principles and implementing best practices, you can create websites that work beautifully across all devices. Remember: responsive design isn't about creating three websites; it's about creating one flexible website that adapts to all screens.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Responsive Design</span>
+                    <span class="tag">Mobile-First</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Web Design</span>
+                    <span class="tag">Best Practices</span>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>More Articles</h3>
+            <ul>
+                <li><a href="article-1.html">Getting Started with Web Development</a></li>
+                <li><a href="article-2.html">CSS Tips and Tricks</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>A modern blog dedicated to sharing insights about web development, design, and technology.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#blog">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Follow</h3>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyBlog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="CSS Tips and Tricks">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Tips and Tricks | MyBlog</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">📝 MyBlog</a>
+
+                <nav aria-label="primary-navigation">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#blog">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <a href="../index.html" class="back-btn">← Back to Home</a>
+
+        <article class="article">
+            <h1>CSS Tips and Tricks</h1>
+
+            <div class="article-meta">
+                <span>📅 January 10, 2026</span>
+                <span>👤 By Your Name</span>
+                <span>⏱️ 6 min read</span>
+            </div>
+
+            <div class="article-content">
+                <p>
+                    CSS is more powerful than many developers realize. Beyond basic styling, there are countless techniques that can help you create stunning websites efficiently. Let's explore some tips and tricks that will elevate your CSS skills.
+                </p>
+
+                <h2>1. CSS Grid and Flexbox Mastery</h2>
+
+                <p>
+                    CSS Grid and Flexbox are game-changers for layout. While many developers know the basics, mastering these tools opens up endless possibilities:
+                </p>
+
+                <ul>
+                    <li><strong>CSS Grid:</strong> Perfect for two-dimensional layouts. Use it for complex page structures</li>
+                    <li><strong>Flexbox:</strong> Ideal for one-dimensional layouts and component alignment</li>
+                    <li>Combine both for maximum flexibility</li>
+                    <li>Use <code>grid-template-areas</code> for semantic layout names</li>
+                </ul>
+
+                <h2>2. Custom Properties (CSS Variables)</h2>
+
+                <p>
+                    CSS variables make your stylesheets more maintainable and scalable:
+                </p>
+
+                <pre><code>:root {
+  --primary-color: #38bdf8;
+  --spacing-unit: 1rem;
+  --border-radius: 12px;
+}
+
+.card {
+  color: var(--primary-color);
+  padding: var(--spacing-unit);
+  border-radius: var(--border-radius);
+}</code></pre>
+
+                <p>
+                    This approach makes it easy to maintain consistent styling across your entire project and enables dynamic theme switching.
+                </p>
+
+                <h2>3. Advanced Selectors</h2>
+
+                <h3>Attribute Selectors</h3>
+                <pre><code>/* Select all links that start with https */
+a[href^="https"] {
+  color: green;
+}
+
+/* Select all elements with data-* attributes */
+[data-theme] {
+  /* styling */
+}</code></pre>
+
+                <h3>Pseudo-classes and Pseudo-elements</h3>
+                <ul>
+                    <li><code>:nth-child()</code> - Select elements by position</li>
+                    <li><code>:not()</code> - Exclude elements from selection</li>
+                    <li><code>::before</code> and <code>::after</code> - Add decorative content</li>
+                    <li><code>:focus-visible</code> - Better keyboard navigation</li>
+                </ul>
+
+                <h2>4. Animations and Transitions</h2>
+
+                <p>
+                    Smooth animations enhance user experience. Use them strategically:
+                </p>
+
+                <pre><code>/* Smooth transition on hover */
+.button {
+  background: #38bdf8;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #7dd3fc;
+  transform: translateY(-2px);
+}</code></pre>
+
+                <h2>5. Performance Optimization</h2>
+
+                <h3>Tips to keep CSS fast:</h3>
+                <ul>
+                    <li>Minimize the use of expensive properties like <code>box-shadow</code> and <code>filter</code></li>
+                    <li>Use <code>transform</code> and <code>opacity</code> for animations (they're GPU-accelerated)</li>
+                    <li>Avoid deep selectors in your CSS</li>
+                    <li>Use <code>will-change</code> sparingly on frequently animated elements</li>
+                    <li>Keep your CSS organized and remove unused styles</li>
+                </ul>
+
+                <h2>6. Responsive Design Patterns</h2>
+
+                <blockquote>
+                    Mobile-first design isn't just about making things look good on phones—it's about designing with constraints in mind, then progressively enhancing for larger screens.
+                </blockquote>
+
+                <p>
+                    Use mobile-first approach with media queries:
+                </p>
+
+                <pre><code>/* Mobile styles first */
+.container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+    flex-direction: row;
+  }
+}</code></pre>
+
+                <h2>7. Accessibility in CSS</h2>
+
+                <ul>
+                    <li>Use sufficient color contrast ratios (WCAG AA: 4.5:1 for text)</li>
+                    <li>Don't remove focus outlines—style them instead</li>
+                    <li>Use <code>@media (prefers-reduced-motion)</code> for users who prefer minimal animations</li>
+                    <li>Ensure buttons have adequate padding for touch targets</li>
+                </ul>
+
+                <h2>Conclusion</h2>
+
+                <p>
+                    Mastering CSS is a journey. Start with these tips, experiment with your projects, and continuously improve your skills. The more you practice, the more efficient and creative you'll become with your stylesheets.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">CSS</span>
+                    <span class="tag">Web Design</span>
+                    <span class="tag">Performance</span>
+                    <span class="tag">Tips & Tricks</span>
+                    <span class="tag">Responsive Design</span>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>More Articles</h3>
+            <ul>
+                <li><a href="article-1.html">Getting Started with Web Development</a></li>
+                <li><a href="article-3.html">Understanding Responsive Design</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>A modern blog dedicated to sharing insights about web development, design, and technology.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#blog">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Follow</h3>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyBlog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
