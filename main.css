@@ -140,16 +140,6 @@ nav a:hover {
     border-color: #ffffff;
 }
 
-/* SCROLL REVEAL ANIMATION */
-.card.scroll-reveal {
-    opacity: 0;
-    animation: none;
-}
-
-.card.scroll-reveal.reveal {
-    animation: revealUp 0.8s ease-out forwards;
-}
-
 /* HEADINGS */
 h2 {
     margin-bottom: 1rem;

@@ -9,8 +9,256 @@
 
     <title>Lowkey | Portfolio</title>
 
-    <link rel="icon" href="imgae files/mafia.png" type="image/x-icon">
-    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="image files/cat.png" type="image/x-icon">
+    <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #273b3a, #1f2d2c);
+            color: #e6d4c7;
+            line-height: 1.7;
+            animation: fadeInBody 0.8s ease-in-out;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 10px rgba(255, 210, 194, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(255, 210, 194, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 10px rgba(255, 210, 194, 0.3);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes revealUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #273b3a, #1f2d2c);
+            border-bottom: 1px solid #e6d4c7;
+            animation: slideInDown 0.6s ease-out;
+        }
+
+        .header h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #e6d4c7;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(230, 212, 199, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* CARD SECTIONS */
+        .card {
+            background: rgba(39, 59, 58, 0.2);
+            border: 1px solid #e6d4c7;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 3rem 0;
+            box-shadow: 0 20px 40px rgba(39, 59, 58, 0.2);
+            animation: slideInUp 0.6s ease-out;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 30px 60px rgba(230, 212, 199, 0.3);
+            transform: translateY(-5px);
+            border-color: #ffffff;
+        }
+
+        /* SCROLL REVEAL ANIMATION */
+        .card.scroll-reveal {
+            opacity: 0;
+            animation: none;
+        }
+
+        .card.scroll-reveal.reveal {
+            animation: revealUp 0.8s ease-out forwards;
+        }
+
+        /* HEADINGS */
+        h2 {
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            color: #e6d4c7;
+        }
+
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* IMAGES */
+        img {
+            max-width: 100%;
+            border-radius: 14px;
+            margin-top: 1rem;
+            transition: all 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(230, 212, 199, 0.3);
+        }
+
+        .trip-images {
+            display: flex;          /* Align children in a row */
+            gap: 20px;              /* Space between images */
+            flex-wrap: 1 1 250px;        /* Wrap to next line on small screens */
+            min-width: 200px;
+            height: auto;
+            justify-content: center; /* Center images horizontally */
+        }
+
+        .trip-images figure {
+            margin: 0;              /* Remove extra margins */
+        }
+
+
+        /* LISTS */
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+        }
+
+        /* LINKS */
+        a {
+            color: #e6d4c7;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(230, 212, 199, 0.4);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            border-top: 1px solid #e6d4c7;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* BACK TO TOP */
+        .back-top {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            html {
+                font-size: 15px;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -40,7 +288,7 @@
 <main class="container">
 
     <!-- ABOUT -->
-    <article id="info" class="card scroll-reveal">
+    <article id="info" class="card">
         <h2>About Me</h2>
 
         <p>
@@ -63,7 +311,7 @@
     <hr>
 
     <!-- SKILLS -->
-    <article id="skills" class="card scroll-reveal">
+    <article id="skills" class="card">
         <h2>Skills</h2>
 
         <ul>
@@ -90,7 +338,7 @@
     <hr>
 
     <!-- EXPERIENCE -->
-    <article id="work_experience" class="card scroll-reveal">
+    <article id="work_experience" class="card">
         <h2>Work Experience</h2>
 
         <ul>
@@ -109,7 +357,7 @@
     <hr>
 
     <!--TRIPS-->
-    <article id="trips" class="card scroll-reveal"> 
+    <article id="trips" class="card"> 
         <h2>Roam with Us</h2>
 
         <div class="trip-images">
@@ -255,24 +503,6 @@
     .next {
         right: 20px;
     }
-
-    .view-more-btn {
-        background-color: #e6d4c7;
-        color: #273b3a;
-        border: none;
-        padding: 12px 24px;
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .view-more-btn:hover {
-        background-color: #ffffff;
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(230, 212, 199, 0.3);
-    }
 </style>
 
 <script>
@@ -288,7 +518,6 @@
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const imageCount = document.getElementById('imageCount');
-    const viewMoreBtn = document.getElementById('viewMoreBtn');
     
     let currentImageIndex = 0;
 
@@ -300,12 +529,6 @@
             currentImageIndex = galleryArray.findIndex(src => src === clickedSrc);
             showModal();
         });
-    });
-
-    // View More button - opens gallery starting from first image
-    viewMoreBtn.addEventListener('click', function() {
-        currentImageIndex = 0;
-        showModal();
     });
 
     function showModal() {
@@ -355,29 +578,6 @@
                 prevImage();
             }
         }
-    });
-</script>
-
-<!-- SCROLL REVEAL ANIMATION -->
-<script>
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('reveal');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Observe all scroll-reveal elements
-    const revealElements = document.querySelectorAll('.scroll-reveal');
-    revealElements.forEach(element => {
-        observer.observe(element);
     });
 </script>
 
