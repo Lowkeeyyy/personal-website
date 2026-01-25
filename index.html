@@ -186,6 +186,7 @@
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const imageCount = document.getElementById('imageCount');
+    const viewMoreBtn = document.getElementById('viewMoreBtn');
     
     let currentImageIndex = 0;
 
@@ -197,6 +198,12 @@
             currentImageIndex = galleryArray.findIndex(src => src === clickedSrc);
             showModal();
         });
+    });
+
+    // Open gallery when View More button is clicked
+    viewMoreBtn.addEventListener('click', function() {
+        currentImageIndex = 0;
+        showModal();
     });
 
     function showModal() {
