@@ -325,3 +325,24 @@ footer {
 .next {
     right: 20px;
 }
+
+/* VIEW MORE BUTTON */
+.view-more-btn {
+    background: rgba(39, 59, 58, 0.3);
+    border: 1px solid #e6d4c7;
+    color: #e6d4c7;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.view-more-btn:hover {
+    background: rgba(39, 59, 58, 0.5);
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(230, 212, 199, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(230, 212, 199, 0.2);
+}
