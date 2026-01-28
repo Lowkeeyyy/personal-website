@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Your Name">
-    <meta name="description" content="A modern blog website with insightful articles">
+    <meta name="author" content="Ashfaq Shahriar">
+    <meta name="description" content="A newsletter platform for independent voices">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Blog | Home</title>
+    <title>My Newsletter | Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,118 +15,148 @@
 
     <!-- HEADER -->
     <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">📝 MyBlog</a>
-
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html" class="logo">MyNewsletter</a>
+            </div>
+            <div class="header-right">
                 <nav aria-label="primary-navigation">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#blog">Blog</a></li>
                         <li><a href="pages/about.html">About</a></li>
                         <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="pages/create-post.html">Write</a></li>
                     </ul>
                 </nav>
+                <button class="subscribe-btn-header">Subscribe</button>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <h1>Welcome to My Blog</h1>
-            <p>Exploring ideas, sharing knowledge, and inspiring growth</p>
-        </div>
-    </section>
-
     <!-- MAIN CONTENT -->
-    <main class="container">
-
-        <!-- FEATURED ARTICLES -->
-        <section id="blog">
-            <h2 style="margin: 2rem 0; text-align: center; font-size: 2rem; color: #ffffff;">Latest Articles</h2>
-
-            <div class="blog-grid">
+    <main class="main-wrapper">
+        <div class="main-container">
+            <!-- LEFT SECTION - FEED -->
+            <section class="feed-section">
 
                 <!-- Article 1 -->
-                <article class="blog-card">
-                    <div class="blog-card-image">
-                        📚
+                <article class="post-card">
+                    <div class="post-header">
+                        <div class="author-info">
+                            <div class="author-avatar">👤</div>
+                            <div>
+                                <h3 class="author-name">Your Name</h3>
+                                <time datetime="2026-01-15">January 15, 2026</time>
+                            </div>
+                        </div>
+                        <button class="subscribe-btn-post">Subscribe</button>
                     </div>
-                    <div class="blog-card-content">
-                        <span class="blog-date">January 15, 2026</span>
-                        <h2>Getting Started with Web Development</h2>
-                        <p>Learn the fundamentals of HTML, CSS, and JavaScript to start your web development journey. This guide covers the essentials you need to know.</p>
-                        <a href="pages/article-1.html" class="read-more">Read More →</a>
+                    <h2 class="post-title">Getting Started with Web Development</h2>
+                    <p class="post-excerpt">Learn the fundamentals of HTML, CSS, and JavaScript to start your web development journey. This guide covers the essentials you need to know.</p>
+                    <a href="pages/article-1.html" class="read-post-link">Read full post →</a>
+                    <div class="post-footer">
+                        <span class="engagement">💬 12</span>
+                        <span class="engagement">❤️ 34</span>
+                        <span class="engagement">🔗 Share</span>
                     </div>
                 </article>
 
                 <!-- Article 2 -->
-                <article class="blog-card">
-                    <div class="blog-card-image">
-                        🎨
+                <article class="post-card">
+                    <div class="post-header">
+                        <div class="author-info">
+                            <div class="author-avatar">👤</div>
+                            <div>
+                                <h3 class="author-name">Your Name</h3>
+                                <time datetime="2026-01-10">January 10, 2026</time>
+                            </div>
+                        </div>
+                        <button class="subscribe-btn-post">Subscribe</button>
                     </div>
-                    <div class="blog-card-content">
-                        <span class="blog-date">January 10, 2026</span>
-                        <h2>CSS Tips and Tricks</h2>
-                        <p>Discover advanced CSS techniques to make your websites look stunning. From animations to responsive design patterns.</p>
-                        <a href="pages/article-2.html" class="read-more">Read More →</a>
+                    <h2 class="post-title">CSS Tips and Tricks</h2>
+                    <p class="post-excerpt">Discover advanced CSS techniques to make your websites look stunning. From animations to responsive design patterns.</p>
+                    <a href="pages/article-2.html" class="read-post-link">Read full post →</a>
+                    <div class="post-footer">
+                        <span class="engagement">💬 8</span>
+                        <span class="engagement">❤️ 28</span>
+                        <span class="engagement">🔗 Share</span>
                     </div>
                 </article>
 
                 <!-- Article 3 -->
-                <article class="blog-card">
-                    <div class="blog-card-image">
-                        ⚙️
+                <article class="post-card">
+                    <div class="post-header">
+                        <div class="author-info">
+                            <div class="author-avatar">👤</div>
+                            <div>
+                                <h3 class="author-name">Your Name</h3>
+                                <time datetime="2026-01-05">January 5, 2026</time>
+                            </div>
+                        </div>
+                        <button class="subscribe-btn-post">Subscribe</button>
                     </div>
-                    <div class="blog-card-content">
-                        <span class="blog-date">January 5, 2026</span>
-                        <h2>Understanding Responsive Design</h2>
-                        <p>Responsive design is essential in modern web development. Learn how to build websites that work on all devices and screen sizes.</p>
-                        <a href="pages/article-3.html" class="read-more">Read More →</a>
+                    <h2 class="post-title">Understanding Responsive Design</h2>
+                    <p class="post-excerpt">Responsive design is essential in modern web development. Learn how to build websites that work on all devices and screen sizes.</p>
+                    <a href="pages/article-3.html" class="read-post-link">Read full post →</a>
+                    <div class="post-footer">
+                        <span class="engagement">💬 15</span>
+                        <span class="engagement">❤️ 42</span>
+                        <span class="engagement">🔗 Share</span>
                     </div>
                 </article>
 
-            </div>
-        </section>
+            </section>
 
+            <!-- RIGHT SECTION - SIDEBAR -->
+            <aside class="sidebar-section">
+                <!-- Newsletter Signup -->
+                <div class="sidebar-card newsletter-card">
+                    <h3>Subscribe to the newsletter</h3>
+                    <p>Get exclusive content, insights, and updates delivered directly to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- About Section -->
+                <div class="sidebar-card about-card">
+                    <h3>About This Newsletter</h3>
+                    <p>A space for sharing ideas about web development, design, and technology. Join a community of independent voices and thoughtful discussions.</p>
+                </div>
+
+                <!-- Archives -->
+                <div class="sidebar-card archives-card">
+                    <h3>Archives</h3>
+                    <ul class="archive-list">
+                        <li><a href="#">January 2026</a></li>
+                        <li><a href="#">December 2025</a></li>
+                        <li><a href="#">November 2025</a></li>
+                        <li><a href="#">October 2025</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="container">
+    <footer class="footer">
+        <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>About</h3>
-                    <p>A modern blog dedicated to sharing insights about web development, design, and technology.</p>
+                    <p>&copy; 2026 MyNewsletter. All rights reserved.</p>
                 </div>
-
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="pages/about.html">About</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-section">
-                    <h3>Follow</h3>
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Email</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 MyBlog. All rights reserved.</p>
             </div>
         </div>
     </footer>
+<script src="js/renderPosts.js"></script>
 
 </body>
 
